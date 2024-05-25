@@ -29,16 +29,22 @@ h3 {
 }
 
 .container {
-  width: 70%;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   margin-inline: auto;
   gap: 20px;
   margin-block: 20px;
 }
 .right-column {
   display: flex;
+  flex-basis: 100%;
   flex-direction: column;
   gap: 20px;
+}
+
+.left-column{
+  flex-basis: 100%;
 }
 
 .card {
@@ -46,12 +52,8 @@ h3 {
   box-shadow: 4px 4px 4px #ccc;
 }
 
-.left-column {
-  width: 35%;
-}
-.right-column {
-  width: 65%;
-}
+
+
 
 .image-box {
   position: relative;
@@ -134,4 +136,17 @@ li {
 
 .subtext {
   margin-block: 10px;
+}
+
+@media screen and (min-width: 641px) {
+  .container{
+    width: 70%;
+    flex-direction: row;
+  }
+  .left-column {
+    flex-basis: 35%;
+  }
+  .right-column {
+    flex-basis: 65%;
+  }
 }
